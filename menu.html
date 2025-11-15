@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu — VAN BHOJ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <header>
+        <a href="index.html" class="brand" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 15px;">
+            <div class="logo">VB</div>
+            <div>
+                <div style="font-weight:800">VAN BHOJ</div>
+                <div style="font-size:12px;color:#555">Tribal Foods Marketplace</div>
+            </div>
+        </a>
+
+        <nav id="mainNav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="index.html#aboutSection" class="nav-link">About Us</a>
+            <a href="index.html#impactSection" class="nav-link">Impact</a>
+            <a href="index.html#contactSection" class="nav-link">Contact</a>
+            
+         
+            
+            <button class="cart-btn" id="cartBtn">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </button>
+            
+            <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+        </nav>
+    </header>
+
+  <!-- HERO -->
+  <section class="hero-spot">
+    <div class="hero-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1>MENU</h1>
+        <p class="hero-lead">Explore curated tribal dishes from across India — real recipes, responsibly sourced.</p>
+
+        <div class="hero-actions">
+          <input id="mainSearch" type="search" placeholder="Search dishes, state or tribe..." aria-label="Search menu">
+          <button id="heroSearchBtn" class="btn primary">Search</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <img src="Images/hero-plate.jpg" alt="Featured food" onerror="this.src='https://via.placeholder.com/600x420?text=VAN+BHOJ'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATE FILTERS DROPDOWN -->
+  <section class="container state-filters-section">
+    <div class="hero-cats" id="stateTabs" aria-label="State categories">
+      <!-- state tabs inserted here -->
+    </div>
+  </section>
+
+  <!-- PROMO BANNERS -->
+  <section class="container promos">
+    <div class="promo-grid">
+      <div class="promo large">
+        <img src="Images/promo1.jpg" alt="" onerror="this.src='https://via.placeholder.com/900x300?text=Promo'">
+      </div>
+      <div class="promo small">
+        <img src="Images/promo2.jpg" alt="" onerror="this.src='https://via.placeholder.com/400x140?text=Offer'">
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN AREA: FILTERS + GRID -->
+  <section class="container menu-area">
+    <aside class="filters card">
+      <h3>Filters</h3>
+
+      <label>State
+        <select id="stateFilter"><option value="all">All States</option></select>
+      </label>
+
+      <label>Tribe
+        <select id="tribeFilter"><option value="all">All Tribes</option></select>
+      </label>
+
+      <label>Type
+        <select id="typeFilter">
+          <option value="all">All Types</option>
+          <option value="Veg">Veg</option>
+          <option value="Non-Veg">Non-Veg</option>
+        </select>
+      </label>
+
+      <div class="filter-actions">
+        <button id="applyFilters" class="btn primary">Apply</button>
+        <button id="resetFilters" class="btn ghost">Reset</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="section-head">
+        <h2>All Dishes</h2>
+        <div class="tools">
+          <label class="sort">Sort:
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price ↑</option>
+              <option value="price-desc">Price ↓</option>
+              <option value="alpha">A → Z</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div id="menuGrid" class="cards-grid">
+        <!-- cards -->
+      </div>
+
+      <div class="center load-more-wrap">
+        <button id="loadMore" class="btn outline">Load more</button>
+      </div>
+    </main>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h4>VAN BHOJ</h4>
+        <p>Connecting tribal artisans with the world through authentic cuisine and fair trade.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Twitter">𝕏</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="index.html#aboutSection">About Us</a></li>
+          <li><a href="index.html#impactSection">Our Impact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>More Info</h4>
+        <ul>
+          <li><a href="index.html#contactSection">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>📧 support@vanbhoj.com</p>
+        <p>📞 +91-XXXXXX-XXXX</p>
+        <p>📍 India</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> VAN BHOJ. All rights reserved. | Empowering Tribal Communities</p>
+    </div>
+  </footer>
+
+  <!-- CART PANEL -->
+  <div class="cart-panel" id="cartPanel">
+    <header>
+      <strong>Your Cart</strong>
+      <button class="close" onclick="closeCart()">×</button>
+    </header>
+    <div class="cart-items" id="cartItems">
+    </div>
+    <div class="cart-summary">
+      <div>Total: <span style="font-weight:800; color:var(--cta-main);">₹<span id="cartTotal">0</span></span></div>
+      <div style="display:flex; justify-content:space-between; margin-top:15px; gap:10px;">
+        <button class="btn" onclick="clearCart()">Clear Cart</button>
+        <button class="btn cta" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREVIEW MODAL -->
+  <div id="previewModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="modalClose" class="modal-close">✕</button>
+      <div class="modal-grid">
+        <div class="modal-media">
+          <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <div class="meta muted" id="modalMeta"></div>
+          <div class="price" id="modalPrice"></div>
+
+          <h4>Ingredients</h4>
+          <ul id="modalIngredients" class="ingredients"></ul>
+
+          <h4>Tribe</h4>
+          <p id="modalTribe"></p>
+
+          <div class="modal-actions">
+            <button id="addToCart" class="btn primary">Add to Cart</button>
+            <button id="close2" class="btn ghost">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="menu.js"></script>
+
+  
+</body>
+</html>

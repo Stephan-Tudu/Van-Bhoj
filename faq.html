@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQs — VAN BHOJ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .faq-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .faq-header {
+      background: linear-gradient(135deg, var(--color-dark-brown), var(--color-deep-red));
+      color: #fff;
+      padding: 50px 40px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .faq-header h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 2.8em;
+    }
+    .faq-header p {
+      margin: 15px 0 0 0;
+      font-size: 1.2em;
+      opacity: 0.95;
+    }
+    .faq-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow-light);
+      border: var(--border-subtle);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover {
+      box-shadow: var(--shadow-medium);
+      transform: translateY(-3px);
+    }
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      transition: background 0.3s ease;
+      font-weight: 600;
+      color: var(--dark-text);
+      user-select: none;
+    }
+    .faq-item.active .faq-question {
+      background: var(--color-light-grey);
+      color: var(--cta-main);
+    }
+    .faq-question:hover {
+      background: var(--color-light-grey);
+    }
+    .faq-icon {
+      font-size: 1.5em;
+      color: var(--cta-main);
+      transition: transform 0.3s ease;
+      margin-left: 10px;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+    .faq-answer-content {
+      padding: 20px;
+      color: #555;
+      line-height: 1.8;
+      background: #f9f9f9;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .category {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .category-title {
+      font-size: 1.8em;
+      color: var(--dark-text);
+      font-weight: 700;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--cta-main);
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <header>
+    <a href="index.html" class="brand" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 15px;">
+      <div class="logo">VB</div>
+      <div>
+        <div style="font-weight:800">VAN BHOJ</div>
+        <div style="font-size:12px;color:#555">Tribal Foods Marketplace</div>
+      </div>
+    </a>
+
+    <nav id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="menu.html" class="nav-link">Menu</a>
+      <a href="index.html#aboutSection" class="nav-link">About Us</a>
+      <a href="index.html#impactSection" class="nav-link">Impact</a>
+      <a href="index.html#contactSection" class="nav-link">Contact</a>
+      
+      <button class="cart-btn" id="cartBtn">
+        🛒 Cart (<span id="cartCount">0</span>)
+      </button>
+      
+      <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="faq-container">
+      <div class="faq-header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about VAN BHOJ</p>
+      </div>
+
+      <!-- ABOUT VAN BHOJ -->
+      <div class="category">
+        <div class="category-title">About VAN BHOJ</div>
+        
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question">
+              What is VAN BHOJ?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                VAN BHOJ is a tribal foods marketplace that connects authentic tribal cuisine from across India directly to your table. We work with indigenous communities to preserve their culinary heritage while providing fair trade opportunities.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How does VAN BHOJ support tribal communities?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                We ensure that 80% of every purchase goes directly to tribal artisans. We also support sustainable farming practices and provide a platform to preserve and celebrate tribal culinary traditions.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Are all products organic?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes! We are committed to 100% organic sourcing. All our ingredients are naturally sourced from tribal communities using sustainable and traditional farming methods.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDERING -->
+      <div class="category">
+        <div class="category-title">Ordering & Delivery</div>
+        
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I place an order?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Visit our Menu page, select your desired dishes, add them to your cart, and proceed to checkout. You'll need to create an account or log in to complete your order.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What is the delivery time?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                We typically deliver within 24 hours of order placement. Delivery time may vary based on your location. You'll receive a tracking number via email once your order ships.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Do you deliver to my area?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                We currently deliver across major cities in India. Check our delivery availability at checkout by entering your postal code. For areas outside our current coverage, please contact us for updates.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What payment methods do you accept?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                We accept credit cards, debit cards, digital wallets, and bank transfers. All payments are processed securely through encrypted payment gateways.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCTS & QUALITY -->
+      <div class="category">
+        <div class="category-title">Products & Quality</div>
+        
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question">
+              Are the dishes ready-to-eat or do I need to cook them?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Most items are delivered fresh and ready to eat. Some products may require simple heating. Instructions will be provided with each order.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How long do the products stay fresh?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Products stay fresh for 3-5 days when stored properly in the refrigerator. Storage instructions will be included in your delivery. For longer storage, freeze items at -18°C.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Do you have allergen information?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes, detailed allergen information is provided on each product page. If you have specific allergies or dietary requirements, please contact us before ordering.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Are your products vegan/vegetarian friendly?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                We offer both vegetarian and non-vegetarian options. Each product is clearly labeled with its type. Use our filters to find dishes that match your dietary preferences.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RETURNS & REFUNDS -->
+      <div class="category">
+        <div class="category-title">Returns & Refunds</div>
+        
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question">
+              What is your return policy?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Items can be returned within 7 days of delivery if they're in original condition and properly sealed. Refunds are processed within 7-10 business days. Please contact our support team to initiate a return.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What if my order arrives damaged?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                If you receive a damaged product, please report it within 24 hours with photos. We will either replace the item or provide a full refund immediately.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can I cancel my order?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Orders can be cancelled within 2 hours of placement. After that, the order moves to preparation. For cancellations, please contact us immediately at support@vanbhoj.com.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCOUNT & SUPPORT -->
+      <div class="category">
+        <div class="category-title">Account & Support</div>
+        
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I create an account?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Click on the "Sign Up" button on our website, provide your details (name, email, phone, and create a password), and verify your email. Your account will be ready to use immediately.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I reset my password?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Click "Forgot Password" on the login page, enter your email address, and you'll receive instructions to reset your password. The reset link expires in 24 hours.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How can I contact customer support?
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                You can reach us through email at support@vanbhoj.com, phone at +91-XXXXXX-XXXX, or use our contact form. We respond to inquiries within 24 hours.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h4>VAN BHOJ</h4>
+        <p>Connecting tribal artisans with the world through authentic cuisine and fair trade.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Twitter">𝕏</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="index.html#aboutSection">About Us</a></li>
+          <li><a href="index.html#impactSection">Our Impact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>More Info</h4>
+        <ul>
+          <li><a href="index.html#contactSection">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>📧 support@vanbhoj.com</p>
+        <p>📞 +91-XXXXXX-XXXX</p>
+        <p>📍 India</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> VAN BHOJ. All rights reserved. | Empowering Tribal Communities</p>
+    </div>
+  </footer>
+
+  <!-- CART PANEL -->
+  <div class="cart-panel" id="cartPanel">
+    <header>
+      <strong>Your Cart</strong>
+      <button class="close" onclick="closeCart()">×</button>
+    </header>
+    <div class="cart-items" id="cartItems">
+    </div>
+    <div class="cart-summary">
+      <div>Total: <span style="font-weight:800; color:var(--cta-main);">₹<span id="cartTotal">0</span></span></div>
+      <div style="display:flex; justify-content:space-between; margin-top:15px; gap:10px;">
+        <button class="btn" onclick="clearCart()">Clear Cart</button>
+        <button class="btn cta" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', function() {
+        const item = this.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
